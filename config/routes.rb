@@ -10,5 +10,7 @@ Rails.application.routes.draw do
 	get '/login', to: 'sessions#new'
 	delete '/logout', to: 'sessions#destroy'
 	post'/login', to: 'sessions#create'
+	get '/edit', to: 'users#edit'
+	patch '/edit', to: 'users#update'	
 	resources :users
 end
