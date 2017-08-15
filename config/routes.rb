@@ -13,4 +13,5 @@ Rails.application.routes.draw do
 	get '/edit', to: 'users#edit'
 	patch '/edit', to: 'users#update'	
 	resources :users
+	resources :microposts, only: [:create, :destroy]
 end
